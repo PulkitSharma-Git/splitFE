@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { PeopleSection } from "@/components/PeopleSection";
 import { ExpenseSection } from "@/components/ExpenseSection";
 
-const API = "https://splitbe.onrender.com";
+const API = "https://splitbe-f98v.onrender.com";
 
 export default function Home() {
   const [users, setUsers] = useState<User[]>([]);
