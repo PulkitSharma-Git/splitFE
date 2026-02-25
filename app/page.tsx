@@ -14,22 +14,22 @@ export default function Home() {
   const [balances, setBalances] = useState<string[]>([]);
 
   const fetchUsers = async () => {
-    const res = await fetch(`${API}/users`);
+    const res = await fetch(`https://splitbe-f98v.onrender.com/users`);
     setUsers(await res.json());
   };
 
   const fetchExpenses = async () => {
-    const res = await fetch(`${API}/expenses`);
+    const res = await fetch(`https://splitbe-f98v.onrender.com/expenses`);
     setExpenses(await res.json());
   };
 
   const fetchBalances = async () => {
-    const res = await fetch(`${API}/expenses/balances`);
+    const res = await fetch(`https://splitbe-f98v.onrender.com/expenses/balances`);
     setBalances(await res.json());
   };
 
   const createUser = async (name: string) => {
-    await fetch(`${API}/users`, {
+    await fetch(`https://splitbe-f98v.onrender.com/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   const createExpense = async (data: any) => {
-    await fetch(`${API}/expenses`, {
+    await fetch(`https://splitbe-f98v.onrender.com/expenses`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
